@@ -9,6 +9,7 @@
 </head>
 
 <body>
+	<input hidden type="checkbox" name="checkbox" id="checkbox">
 	<header>
 		<h1>Advanced Student Result Dashboard</h1>
 	</header>
@@ -118,6 +119,57 @@
 		<br>
 		<button class="red" id="deleteData">Clear Saved Data</button>
 		<button class="blue" id="sortData">Sort Data</button>
+		<button class="gray">
+			<label for="checkbox">
+				Dark Mode
+			</label>
+		</button>
+		<button class="gray" id="exportCSV">Export CSV</button>
+
+	</section>
+
+	<section id="update" class="hidden">
+		<form action="">
+			<h3>Edit Student Records</h3>
+			<div class="input-control">
+				<label for="updateStdName">
+					<h4>Student Name:</h4>
+				</label>
+				<input type="text" name="updateStdName" id="updateStdName" required>
+			</div>
+			<div class="input-control">
+				<label for="updateStdMatric">
+					<h4>Matric Number:</h4>
+				</label>
+				<input type="text" name="updateStdMatric" id="updateStdMatric" required>
+			</div>
+			<div class="input-control">
+				<label for="arsAss">
+					<h4>Assignment Mark:</h4>
+				</label>
+				<input type="text" name="arsAss" id="updateStdAss" min="0" required max="100">
+			</div>
+			<div class="input-control">
+				<label for="updateStdlab">
+					<h4>Lab Test Mark</h4>
+				</label>
+				<input type="text" name="updateStdlab" id="updateStdlab" min="0" required max="100">
+			</div>
+			<div class="input-control">
+				<label for="updateStdName">
+					<h4>Project Mark:</h4>
+				</label>
+				<input type="text" name="updateStdProject" id="updateStdProject" required min="0" max="100">
+			</div>
+			<div class="input-control">
+				<label for="updateStdfinal">
+					<h4>Final Exam Mark:</h4>
+				</label>
+				<input type="text" name="updateStdfinal" id="updateStdfinal" required min="0" max="100">
+			</div>
+			<button class="blue" type="submit">Update</button>
+			<button class="gray" type="button" id="reset">Reset</button>
+		</form>
 	</section>
 
 	<script src="app.js"></script>
