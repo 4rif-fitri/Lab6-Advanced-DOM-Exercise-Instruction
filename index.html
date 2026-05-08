@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Advanced DOM Exercise Instruction</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	<header>
+		<h1>Advanced Student Result Dashboard</h1>
+	</header>
+	<section id="top">
+
+		<section id="input">
+			<form action="">
+
+				<h3>Add Student</h3>
+				<div class="input-control">
+					<label for="stdName">
+						<h4>Student Name:</h4>
+					</label>
+					<input type="text" name="stdName" id="stdName" required value="LOREM">
+				</div>
+				<div class="input-control">
+					<label for="stdMatric">
+						<h4>Matric Number:</h4>
+					</label>
+					<input type="text" name="stdMatric" id="stdMatric" required value="D032410321">
+				</div>
+				<div class="input-control">
+					<label for="arsAss">
+						<h4>Assignment Mark:</h4>
+					</label>
+					<input type="text" name="arsAss" id="stdAss" min="0" required max="100" value="10">
+				</div>
+				<div class="input-control">
+					<label for="stdlab">
+						<h4>Lab Test Mark</h4>
+					</label>
+					<input type="text" name="stdlab" id="stdlab" min="0" required max="100" value="10">
+				</div>
+				<div class="input-control">
+					<label for="stdName">
+						<h4>Project Mark:</h4>
+					</label>
+					<input type="text" name="stdProject" id="stdProject" required min="0" max="100" value="10">
+				</div>
+				<div class="input-control">
+					<label for="stdfinal">
+						<h4>Final Exam Mark:</h4>
+					</label>
+					<input type="text" name="stdfinal" id="stdfinal" required min="0" max="100" value="10">
+				</div>
+				<button class="blue" id="add" type="submit">Add Student</button>
+				<button class="gray" id="clear">Clear From</button>
+			</form>
+
+		</section>
+
+		<section id="statistic">
+			<h3>Class Statistics</h3>
+
+			<h3>Total Students: <span id="totalStd">0</span></h3>
+			<h3>Pass: <span id="totalPass">0</span></h3>
+			<h3>Fail: <span id="totalFail">0</span></h3>
+			<h3>Class Average: <span id="classAvg">0</span></h3>
+			<h3>Height Average: <span id="heightAvg">0</span></h3>
+			<h3>Lowest Average: <span id="lowestAvg">0</span></h3>
+
+		</section>
+
+		<section id="detail">
+			<h3>Stuent Details</h3>
+
+			<h3>Name: <span id="dtlName">--</span></h3>
+			<h3>Matric Number: <span id="dtlMatric">--</span></h3>
+			<h3>Assignment: <span id="dtlAss">--</span></h3>
+			<h3>Leb Test: <span id="dtlLab">--</span></h3>
+			<h3>Project: <span id="dtlProject">--</span></h3>
+			<h3>Grade: <span id="dtlGarade">--</span></h3>
+			<h3>Status: <span id="dtlStatus">--</span></h3>
+		</section>
+
+	</section>
+
+	<section id="control">
+		<h3>Controls</h3>
+		<input placeholder="Search by name or matric number" type="text" name="cari" id="cari">
+		<select name="filterStatus" id="filterStatus">
+			<option value="All">All</option>
+			<option value="Pass">Pass</option>
+			<option value="Fail">Fail</option>
+		</select>
+	</section>
+
+	<section id="table">
+		<h3>Student Records</h3>
+		<br>
+		<table>
+			<thead>
+				<tr>
+					<td>No</td>
+					<td>Name</td>
+					<td>Matric Number</td>
+					<td>Average</td>
+					<td>Grade</td>
+					<td>Status</td>
+					<td>Action</td>
+				</tr>
+			</thead>
+			<tbody>
+
+			</tbody>
+		</table>
+		<br>
+		<button class="red" id="deleteData">Clear Saved Data</button>
+		<button class="blue" id="sortData">Sort Data</button>
+	</section>
+
+	<script src="app.js"></script>
+</body>
+
+</html>
